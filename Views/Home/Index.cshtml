@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model dojoSurvey_Model.Models.Survey
+<form method="POST" action="/survey">
+    <label for="Name">Name: <input asp-for="Name"></label> <span class="error" asp-validation-for="Name"></span><br>
+    
+    <label for="Location">Location: <select asp-for="Location" id="Location">
+        <option value="San Jose">San Jose</option>
+        <option value="Seattle">Seattle</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="Dallas">Dallas</option>
+        <option value="TC">TC</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Tulsa">Tulsa</option>
+        <option value="East Bay">East Bay</option>
+    </select></label> <span class="error" asp-validation-for="Location"></span><br>
+    
+    <label for="Language">Language: <input asp-for="Language"></label> <span class="error" asp-validation-for="Language"></span><br>
+
+    <label for="Comment">Comment: <textarea asp-for="Comment"></textarea></label> <span class="error" asp-validation-for="Comment"></span><br>
+    <input type="submit" value="Submit!">
+</form>
